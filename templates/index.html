@@ -1,27 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Portfolio</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+  </head>
+  <body>
+    <!-- Header & Navigation -->
     <header>
-        <h1>Welcome to My Portfolio</h1>
-        <p>Hi, I'm a web developer passionate about building cool stuff!</p>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="intro">
+        <h1>Hi, I'm Mohammed Zaid B</h1>
+        <p>
+          - DevOps Engineer dedicated to streamlining deployments and
+          accelerating innovation.
+        </p>
+      </div>
     </header>
 
-    <section>
-        <h2>Projects</h2>
-        <ul>
-            <li>Project A - A web app for tracking habits</li>
-            <li>Project B - A personal blog built with Flask</li>
-            <li>Project C - A weather dashboard using APIs</li>
-        </ul>
+    <!-- About Section -->
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        Result-oriented DevOps Engineer with 2 years of hands-on experience in
+        automating infrastructure, managing cloud environments, and streamlining
+        CI/CD pipelines. Proficient in AWS, Docker, Kubernetes, Terraform, and
+        Jenkins. Skilled in monitoring, scripting, and configuration management.
+        Adept at working in Agile teams, ensuring faster and more reliable
+        deployments.
+      </p>
     </section>
 
-    <footer>
-        <p>Contact: myemail@example.com</p>
+    <!-- Projects Section -->
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="project-list">
+        <!-- AWS Multi-Tier Project -->
+        <article class="project-card">
+          <h3>
+            Deploying Multi-Tier Website Using AWS EC2
+            <span style="font-size: 0.85rem; color: gray">(Sep 2024)</span>
+          </h3>
+          <p>
+            Deployed a PHP website that receives user data and stores it in an
+            RDS MySQL database. The architecture is scalable with Auto Scaling,
+            highly available, and secured with encrypted RDS data accessible
+            only to authorized admins.
+          </p>
+          <div class="tech-icons">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg"
+              alt="AWS"
+            />
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+              alt="MySQL"
+            />
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"
+              alt="PHP"
+            />
+          </div>
+          <a href="#" class="btn">View Project</a>
+        </article>
+
+        <!-- CI/CD Project -->
+        <article class="project-card">
+          <h3>
+            Application Deployment Using CI/CD Tools
+            <span style="font-size: 0.85rem; color: gray">(Jan 2025)</span>
+          </h3>
+          <p>
+            Implemented a Git workflow with Jenkins to deploy containers on
+            different ports for various branches. Automated build, testing, and
+            deployment using Jenkins, Git, and Docker for streamlined production
+            releases.
+          </p>
+          <div class="tech-icons">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jenkins/jenkins-original.svg"
+              alt="Jenkins"
+            />
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
+              alt="Docker"
+            />
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"
+              alt="Git"
+            />
+          </div>
+          <a href="#" class="btn">View Project</a>
+        </article>
+
+        <!-- Old Projects -->
+        <article class="project-card">
+          <h3>Habit Tracker</h3>
+          <p>
+            A web app to track daily habits and visualize progress over time.
+          </p>
+          <a href="#" class="btn">View Project</a>
+        </article>
+
+        <article class="project-card">
+          <h3>Personal Blog</h3>
+          <p>
+            A responsive blog built with Flask and SQLite for managing posts.
+          </p>
+          <a href="#" class="btn">View Project</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact">
+      <h2>Contact</h2>
+      <p>Email: <a href="mailto:myemail@example.com">mohammedzaidb7@gmail.com</a></p>
+      <div class="social-links">
+        <a href="www.linkedin.com/in/mohammed-zaid-b-36b4b324a" target="_blank">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg"
+            alt="LinkedIn"
+          />
+        </a>
+        <a href="https://github.com/mzaid3737" target="_blank">
+          <img
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+            alt="GitHub"
+          />
+        </a>
+      </div>
+      <p>© 2025 Zaid. All rights reserved.</p>
     </footer>
-</body>
+  </body>
 </html>
