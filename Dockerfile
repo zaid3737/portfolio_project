@@ -7,14 +7,14 @@ WORKDIR /app
 # Copy requirements file first (for caching)
 COPY requirements.txt .
 
-# Install dependencies from requirements.txt
+# Install dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the rest of the project files
+# Copy all files
 COPY . .
 
-# Expose port
-EXPOSE 5000
+# Cloud Run will set PORT env var automatically, so no hardcode here
+EXPOSE 8080
 
 # Run the Flask app
 CMD ["python", "app.py"]
