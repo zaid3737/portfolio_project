@@ -1,0 +1,9 @@
+steps:
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'us-central1-docker.pkg.dev/calm-oxide-463807-p6/demo-check/my-image:latest', '.']
+
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'us-central1-docker.pkg.dev/calm-oxide-463807-p6/demo-check/my-image:latest']
+
+images:
+  - 'us-central1-docker.pkg.dev/calm-oxide-463807-p6/demo-check/my-image:latest'
