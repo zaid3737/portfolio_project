@@ -7,3 +7,5 @@ steps:
 
 images:
   - 'us-central1-docker.pkg.dev/calm-oxide-463807-p6/demo-check/my-image:latest'
+options:
+  logging: CLOUD_LOGGING_ONLY
